@@ -9,8 +9,8 @@ int main(){
 	char Auteur[100][100];
 	float Prix[100];
 	int Quantite[100];
-	int a,b;
-	
+	int a,b,d;
+	int quantite_totale=0;
 	
 
 
@@ -92,7 +92,12 @@ for (a=index;a<j-1;a++)
 		break;
 	
 	case 5:
-		printf("Le nombre total des livres en stock est: %d\n",j);
+		for (d=0;d<j;d++)
+		{
+			quantite_totale += Quantite[d];
+		}
+		
+		printf("Le nombre total des livres en stock est: %d\n",quantite_totale);
 		break;
 
 		
